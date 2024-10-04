@@ -17,8 +17,6 @@ class MainWindow(QMainWindow): # MainWindow class extends QMainWindow
         layout.addWidget(component) # adding component to widget (this will appear below the button we declared earlier)
         connectivity = ConnectivityPanel()
         layout.addWidget(connectivity)
-        # first_layout = ConnectivityPanel()
-        # layout.addWidget(first_layout)
         central = QWidget() # create separate widget to act as a central widget (container) for the rest of the widgets
         central.setLayout(layout) # set the layout for this central widget to the layout we previously defined
         self.setCentralWidget(central) # set central widget for MainWindow (makes this widget the main content area)
