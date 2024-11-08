@@ -17,12 +17,13 @@ class MainWindow(QMainWindow): # MainWindow class extends QMainWindow
 
         # placeholders to verify that the quadrant system works
         self.widgets = {
-            0: AdjustableWidget("Speed Panel", quadrant=0),
+            0: SpeedPanel("Speed Panel", quadrant=0),
             1: AdjustableWidget("Webcam", quadrant=1),
             2: AdjustableWidget("Connectivity", quadrant=2),
             3: AdjustableWidget("Controller Sensitivity", quadrant=3)
-
         }
+
+        self.widgets[0].update_speeds(50, 50, 50)
 
         for widget in self.widgets.values():
             widget.quadrantChanged.connect(self.handleQuadrantSwap)
